@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"     android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        app:cardMaxElevation="2dp"
+        app:cardElevation="1dp"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentStart="true"
+        android:focusable="true"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/groupChatHolder"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgGroupLanguage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ro" />
+
+            <TextView
+                android:id="@+id/txtGroupName"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/imgGroupLanguage"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:text="Nume Grup" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

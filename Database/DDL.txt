@@ -1,0 +1,243 @@
+create table bus
+(
+	bus_id int auto_increment
+		primary key,
+	registration_number varchar(30) not null,
+	password varchar(30) not null,
+	bus_route_id int not null,
+	constraint autobuz_bus_name_uindex
+		unique (registration_number)
+)
+engine=InnoDB
+;
+
+create index bus_bus_route_bus_route_id_fk
+	on bus (bus_route_id)
+;
+
+create table bus_route
+(
+	bus_route_id int auto_increment
+		primary key,
+	bus_route_name varchar(30) not null comment '100,48,100C
+		',
+	city_id int not null,
+	constraint bus_line_nr_city_id_uindex
+		unique (bus_route_name, city_id)
+)
+engine=InnoDB
+;
+
+alter table bus
+	add constraint bus_bus_route_bus_route_id_fk
+		foreign key (bus_route_id) references bus_route (bus_route_id)
+;
+
+create table bus_route_trip
+(
+	trip_id int auto_increment
+		primary key,
+	bus_route_id int not null,
+	direction tinyint(1) default '0' null comment '0 sau 1(Drection of travel) 0=dus 1=intors orice ruta are 2 directii
+		(use to distinguish between bi-directional trips with the same route_id)',
+	trip_name varchar(30) null,
+	constraint bus_route_trip_bus_route_id_direction_uindex
+		unique (bus_route_id, direction),
+	constraint bus_route_trip_bus_route_id_trip_name_uindex
+		unique (bus_route_id, trip_name),
+	constraint bus_route_trip_bus_route_bus_route_id_fk
+		foreign key (bus_route_id) references bus_route (bus_route_id)
+)
+comment 'nu poate sa fie 1 48DUS si dinou 1 48DUS
+(in aceasi ruta nu pot fi 2 trips cu acelasi nume)
+' engine=InnoDB
+;
+
+create table bus_route_trip_details
+(
+	id int auto_increment
+		primary key,
+	trip_id int not null,
+	stop_id int not null,
+	stop_order int not null,
+	constraint bus_route_trip_details_trip_id_stop_id_order_uindex
+		unique (trip_id, stop_id),
+	constraint bus_route_trip_details_trip_id_stop_order_uindex
+		unique (trip_id, stop_order),
+	constraint bus_route_trip_details_bus_route_trip_trip_id_fk
+		foreign key (trip_id) references bus_route_trip (trip_id)
+)
+engine=InnoDB
+;
+
+create index bus_route_trip_details_bus_stop_id_fk
+	on bus_route_trip_details (stop_id)
+;
+
+create table bus_stop
+(
+	id int auto_increment
+		primary key,
+	lat decimal(11,8) not null,
+	lng decimal(11,8) not null,
+	stop_name varchar(20) default 'Nameless' null,
+	constraint bus_stop_lat_lng_uindex
+		unique (lat, lng)
+)
+engine=InnoDB
+;
+
+alter table bus_route_trip_details
+	add constraint bus_route_trip_details_bus_stop_id_fk
+		foreign key (stop_id) references bus_stop (id)
+;
+
+create table chat_room
+(
+	id int auto_increment
+		primary key,
+	creator int not null,
+	city int not null,
+	created_at datetime not null,
+	name varchar(50) default 'no name' not null,
+	language varchar(5) default 'eng' not null,
+	constraint chat_room_creator_city_uindex
+		unique (creator, city),
+	constraint chat_room_creator_created_at_uindex
+		unique (creator, created_at)
+)
+comment 'room_name=unique generated room name' engine=InnoDB
+;
+
+create index chat_room_city_id_fk
+	on chat_room (city)
+;
+
+create table city
+(
+	id int auto_increment
+		primary key,
+	city_name varchar(30) not null,
+	id_country int not null,
+	constraint city_city_name_id_country_uindex
+		unique (city_name, id_country)
+)
+engine=InnoDB
+;
+
+create index city_country_id_fk
+	on city (id_country)
+;
+
+alter table bus_route
+	add constraint bus_route_city_id_fk
+		foreign key (bus_route_id) references city (id)
+;
+
+alter table chat_room
+	add constraint chat_room_city_id_fk
+		foreign key (city) references city (id)
+;
+
+create table country
+(
+	id int auto_increment
+		primary key,
+	name varchar(30) not null,
+	constraint country_name_uindex
+		unique (name)
+)
+engine=InnoDB
+;
+
+alter table city
+	add constraint city_country_id_fk
+		foreign key (id_country) references country (id)
+;
+
+create table list
+(
+	id int auto_increment
+		primary key,
+	title varchar(100) not null,
+	description text null,
+	thumbnail varchar(255) not null,
+	creator int not null,
+	created_at datetime not null,
+	constraint list_creator_title_uindex
+		unique (creator, title),
+	constraint list_creator_created_at_uindex
+		unique (creator, created_at)
+)
+engine=InnoDB
+;
+
+create table list_details
+(
+	id_list int not null,
+	id_location int not null,
+	id int auto_increment
+		primary key,
+	constraint list_details_id_list_id_location_uindex
+		unique (id_list, id_location),
+	constraint list_details_list_id_fk
+		foreign key (id_list) references list (id)
+)
+engine=InnoDB
+;
+
+create index list_details_location_id_fk
+	on list_details (id_location)
+;
+
+create table location
+(
+	id int auto_increment
+		primary key,
+	name varchar(50) not null,
+	description text not null,
+	lat decimal(10,8) not null,
+	lng decimal(10,8) not null,
+	thumbnail varchar(255) not null,
+	city_id int not null,
+	constraint location_name_city_id_uindex
+		unique (name, city_id),
+	constraint location_lat_lng_uindex
+		unique (lat, lng),
+	constraint location_city_id_fk
+		foreign key (city_id) references city (id)
+)
+engine=InnoDB
+;
+
+create index location_city_id_fk
+	on location (city_id)
+;
+
+alter table list_details
+	add constraint list_details_location_id_fk
+		foreign key (id_location) references location (id)
+;
+
+create table user
+(
+	id int auto_increment
+		primary key,
+	username varchar(50) not null,
+	pass varchar(255) not null,
+	constraint user_username_uindex
+		unique (username)
+)
+engine=InnoDB
+;
+
+alter table chat_room
+	add constraint chat_room_user_id_fk
+		foreign key (creator) references user (id)
+;
+
+alter table list
+	add constraint list_user_id_fk
+		foreign key (creator) references user (id)
+;
+

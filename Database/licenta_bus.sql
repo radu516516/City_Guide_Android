@@ -1,0 +1,9 @@
+INSERT INTO licenta.bus (bus_id, registration_number, password, bus_route_id) VALUES (1, 'CT-01-RAT', '1234', 5);
+INSERT INTO licenta.bus (bus_id, registration_number, password, bus_route_id) VALUES (2, 'CT-02-RAT', '1234', 5);
+INSERT INTO licenta.bus (bus_id, registration_number, password, bus_route_id) VALUES (3, 'CT-23-RAT', '1234', 5);
+INSERT INTO licenta.bus (bus_id, registration_number, password, bus_route_id) VALUES (4, 'CT-07-EXE', '1234', 6);
+INSERT INTO licenta.bus (bus_id, registration_number, password, bus_route_id) VALUES (5, 'CT-72-RAD', '1234', 6);
+INSERT INTO licenta.bus (bus_id, registration_number, password, bus_route_id) VALUES (6, 'CT-03-RAT', '1234', 5);
+INSERT INTO licenta.bus (bus_id, registration_number, password, bus_route_id) VALUES (7, 'CT-04-RAT', '1234', 5);
+INSERT INTO licenta.bus (bus_id, registration_number, password, bus_route_id) VALUES (8, 'CT-10-RAT', '1234', 10);
+INSERT INTO licenta.bus (bus_id, registration_number, password, bus_route_id) VALUES (9, 'CT-11-RAT', '1234', 7);

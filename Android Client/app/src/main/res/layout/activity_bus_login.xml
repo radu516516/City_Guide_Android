@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background2"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:padding="40dp"
+    tools:context="com.example.radu5.turistgroupchat.BusTracking.BusLoginActivity">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rttlogo"
+        android:layout_marginTop="10dp"/>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp">
+        <EditText
+            android:id="@+id/txtNrInmatriculare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:drawableLeft="@drawable/ic_bus1"
+            android:inputType="textPersonName"
+            android:textColor="#cccccc"
+            android:textSize="20sp"
+            android:hint="@string/NR.Inmatriculare" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp">
+        <EditText
+            android:id="@+id/txtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:drawableLeft="@drawable/ic_pass"
+            android:inputType="textVisiblePassword"
+            android:textColor="#cccccc"
+            android:textSize="16sp"
+            android:hint="@string/parola" />
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:id="@+id/btnLogIn"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:textColor="#cccccc"
+        android:background="?android:attr/statusBarColor"
+        android:text="Log In" />
+</LinearLayout>

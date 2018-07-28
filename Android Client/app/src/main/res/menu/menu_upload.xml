@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_test"
+        android:orderInCategory="100"
+        android:title="test"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/item_upload"
+        android:icon="@drawable/ic_action_name"
+        app:showAsAction="ifRoom"
+        android:title="Compose">
+    </item>
+</menu>

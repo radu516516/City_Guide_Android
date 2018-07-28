@@ -1,0 +1,1 @@
+INSERT INTO licenta.user (id, username, pass) VALUES (1, 'radu516', '$2a$05$zLIKnD6sKIMzsefXSX3duexv75mqr5DsXmzQSDSto9swupdK3M1aO');

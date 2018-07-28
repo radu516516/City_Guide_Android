@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+
+    <color name="red">#FF0000</color>
+    <color name="blue">#0000FF</color>
+    <color name="magenta">#FF00FF</color>
+    <color name="orange">#f78b00</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="azure">#007FFF</color>
+    <color name="violet">#7F00FF</color>
+    <color name="grey">#515A5A   </color>
+
+
+    <array name="tripcolors">
+        <item>@color/blue</item>
+        <item>@color/blue5</item>
+        <item>@color/blue1</item>
+        <item>@color/blue4</item>
+        <item>@color/cyan</item>
+        <item>@color/azure</item>
+        <item>@color/grey</item>
+        <item>@color/violet</item>
+        <item>@color/red</item>
+        <item>@color/magenta</item>
+        <item>@color/orange</item>
+        <item>@color/yellow</item>
+    </array>
+
+
+    <color name="red1">#af0a0a</color>
+    <color name="red2">#c40909</color>
+    <color name="red3">#e50909</color>
+    <color name="red4">#ff9999</color>
+    <color name="blue1">#66a3ff</color>
+    <color name="blue2">#0033cc</color>
+    <color name="linkBlue">#4d94ff</color>
+    <color name="blue3">#00c4cc</color>
+    <color name="blue4">#00aab1</color>
+    <color name="blue5">#007f85</color>
+    <color name="White">#fff</color>
+    <color name="darkGrey">#a6a6a6 </color>
+    <color name="Grey">#a6a6a6 </color>
+
+    <color name="lightGrey">#f2f2f2 </color>
+    <color name="DarkGrey">#737373 </color>
+    <color name="Black">#000 </color>
+
+
+
+    <color name="username12">#E1F5FE</color>
+    <color name="username13">#B3E5FC</color>
+    <color name="username14">#81D4FA</color>
+    <color name="username15">#4FC3F7</color>
+    <color name="username16">#29B6F6</color>
+    <color name="username17">#03A9F4</color>
+    <color name="username18">#039BE5</color>
+
+    <color name="username19">#0288D1</color>
+    <color name="username20">#0277BD</color>
+    <color name="username21">#01579B</color>
+    <color name="username22">#80D8FF</color>
+    <color name="username23">#40C4FF</color>
+    <color name="username24">#00B0FF</color>
+    <color name="username25">#0091EA</color>
+
+    <color name="username26">#E0F7FA</color>
+    <color name="username27">#B2EBF2</color>
+    <color name="username28">#80DEEA</color>
+    <color name="username29">#00BCD4</color>
+    <color name="username30">#00ACC1</color>
+    <color name="username31">#0097A7</color>
+    <color name="username32">#00838F</color>
+
+    <color name="username33">#006064</color>
+    <color name="username34">#84FFFF</color>
+    <color name="username35">#18FFFF</color>
+    <color name="username36">#80D8FF</color>
+    <color name="username37">#00E5FF</color>
+    <color name="username38">#00B8D4</color>
+
+
+
+
+
+    <color name="username0">#e21400</color>
+    <color name="username1">#91580f</color>
+    <color name="username2">#f8a700</color>
+    <color name="username3">#f78b00</color>
+    <color name="username4">#58dc00</color>
+    <color name="username5">#287b00</color>
+
+    <color name="username6">#5DBCD2</color>
+    <color name="username7">#4ae8c4</color>
+    <color name="username8">#3b88eb</color>
+    <color name="username9">#3824aa</color>
+    <color name="username10">#a700ff</color>
+    <color name="username11">#d300e7</color>
+</resources>

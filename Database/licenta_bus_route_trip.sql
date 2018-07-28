@@ -1,0 +1,12 @@
+INSERT INTO licenta.bus_route_trip (trip_id, bus_route_id, direction, trip_name) VALUES (1, 5, 0, '48_Dus');
+INSERT INTO licenta.bus_route_trip (trip_id, bus_route_id, direction, trip_name) VALUES (6, 5, 1, '48_Intors');
+INSERT INTO licenta.bus_route_trip (trip_id, bus_route_id, direction, trip_name) VALUES (13, 6, 0, '100_Dus');
+INSERT INTO licenta.bus_route_trip (trip_id, bus_route_id, direction, trip_name) VALUES (14, 6, 1, '100_Intors');
+INSERT INTO licenta.bus_route_trip (trip_id, bus_route_id, direction, trip_name) VALUES (15, 9, 0, '42_Dus');
+INSERT INTO licenta.bus_route_trip (trip_id, bus_route_id, direction, trip_name) VALUES (16, 9, 1, '42_Intors');
+INSERT INTO licenta.bus_route_trip (trip_id, bus_route_id, direction, trip_name) VALUES (17, 8, 1, '44_Intors');
+INSERT INTO licenta.bus_route_trip (trip_id, bus_route_id, direction, trip_name) VALUES (18, 8, 0, '44_Dus');
+INSERT INTO licenta.bus_route_trip (trip_id, bus_route_id, direction, trip_name) VALUES (19, 7, 0, '540_Dus');
+INSERT INTO licenta.bus_route_trip (trip_id, bus_route_id, direction, trip_name) VALUES (20, 7, 1, '540_Intors');
+INSERT INTO licenta.bus_route_trip (trip_id, bus_route_id, direction, trip_name) VALUES (21, 10, 0, '102_Dus');
+INSERT INTO licenta.bus_route_trip (trip_id, bus_route_id, direction, trip_name) VALUES (22, 10, 1, '102_Intors');

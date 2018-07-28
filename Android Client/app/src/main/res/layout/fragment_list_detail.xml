@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_background"
+    android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:background="?attr/colorPrimary"
+        android:layout_alignParentStart="true"
+        android:id="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:id="@+id/back_arrow">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_back_arrow"
+                android:layout_centerVertical="true"
+                android:id="@+id/image_back_arrow"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textListName"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+            android:layout_marginRight="5dp"
+            android:textStyle="bold"
+            android:text="List Name" />
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/main_content"
+        android:layout_below="@id/toolbar"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_listitems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            >
+        </android.support.v7.widget.RecyclerView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:src="@drawable/ic_add"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            app:layout_anchor="@id/recycler_view_listitems"
+            app:layout_anchorGravity="bottom|right|end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+
+
+</RelativeLayout>

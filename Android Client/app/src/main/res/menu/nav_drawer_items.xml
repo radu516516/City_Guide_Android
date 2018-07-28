@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group1">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_main_map"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_liste"
+            android:icon="@drawable/ic_liste"
+            android:title="List" />
+    </group>
+    <item android:title="Meet People">
+        <menu>
+            <group android:checkableBehavior="single"
+                android:id="@+id/group2">
+                <item
+                    android:id="@+id/nav_groups"
+                    android:icon="@drawable/ic_group_chat"
+                    android:title="Chat Groups" />
+
+                <item
+                    android:id="@+id/nav_upload"
+                    android:icon="@drawable/ic_action_name"
+                    android:title="Create List" />
+            </group>
+        </menu>
+    </item>
+</menu>

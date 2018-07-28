@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    >
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        />
+
+    <!-- PUT SOMETHING ON TOP MAYBE -->
+    <LinearLayout
+        android:id="@+id/topMapLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottomMapLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnTrack"
+        android:background="@color/White"
+        android:elevation="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:divider="@drawable/horizontaldivider"
+        android:showDividers="middle"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:divider="@drawable/verticaldivider"
+            android:showDividers="middle"
+            android:layout_weight="50"
+            android:weightSum="100">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:orientation="vertical"
+                android:padding="10dp"
+
+                 >
+
+                <TextView
+                    android:id="@+id/lblRoute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="Route"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                <TextView
+                    android:id="@+id/txtRoute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_bus1"
+                    android:gravity="center_vertical"
+                    android:text="Bus Route"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="50"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/lblTrip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Trip"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                <Spinner
+                    android:id="@+id/spinnerTrip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bus Trip"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                <!--  <TextView
+                      android:id="@+id/txtTrip"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Bus Trip"
+                      android:textAppearance="@style/TextAppearance.AppCompat.Large" /> -->
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:orientation="horizontal"
+            android:divider="@drawable/verticaldivider"
+            android:showDividers="middle"
+            android:weightSum="100"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="50"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/lblBusName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bus Name"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                <TextView
+                    android:id="@+id/txtBusName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bus Name"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="50"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/lblLiveTrack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Live Track"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                <TextView
+                    android:id="@+id/txtLiveTrack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="OFF"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnTrack"
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#00D05D"
+        android:text="START TRACKING"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
+
+</RelativeLayout>

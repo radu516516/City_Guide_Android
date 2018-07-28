@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="username_colors">
+
+        <item>@color/username6</item>
+        <item>@color/username7</item>
+        <item>@color/username8</item>
+        <item>@color/username9</item>
+        <item>@color/username10</item>
+        <item>@color/username11</item>
+        <item>@color/username12</item>
+        <item>@color/username13</item>
+        <item>@color/username14</item>
+        <item>@color/username15</item>
+        <item>@color/username16</item>
+        <item>@color/username17</item>
+        <item>@color/username18</item>
+        <item>@color/username19</item>
+        <item>@color/username20</item>
+        <item>@color/username21</item>
+        <item>@color/username22</item>
+        <item>@color/username23</item>
+        <item>@color/username24</item>
+        <item>@color/username25</item>
+        <item>@color/username26</item>
+        <item>@color/username27</item>
+        <item>@color/username28</item>
+        <item>@color/username29</item>
+        <item>@color/username30</item>
+        <item>@color/username31</item>
+        <item>@color/username32</item>
+        <item>@color/username33</item>
+        <item>@color/username34</item>
+        <item>@color/username35</item>
+        <item>@color/username36</item>
+        <item>@color/username37</item>
+        <item>@color/username38</item>
+
+    </array>
+
+</resources>

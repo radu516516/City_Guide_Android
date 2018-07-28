@@ -1,0 +1,7 @@
+INSERT INTO licenta.list (id, title, description, thumbnail, creator, created_at) VALUES (1, 'Lista1', 'test', '/uploads/listThumbnails/1525434054535_IMG_20160417_152955.jpg', 1, '2019-09-20 16:55:36');
+INSERT INTO licenta.list (id, title, description, thumbnail, creator, created_at) VALUES (2, 'Lista2', 'test bucuresti', '/uploads/listThumbnails/1525434054535_IMG_20160417_152955.jpg', 1, '2018-06-20 16:56:37');
+INSERT INTO licenta.list (id, title, description, thumbnail, creator, created_at) VALUES (3, 'Lista3', 'test rome', '/uploads/listThumbnails/1525434054535_IMG_20160417_152955.jpg', 1, '2016-06-20 16:56:39');
+INSERT INTO licenta.list (id, title, description, thumbnail, creator, created_at) VALUES (4, 'Top 3 locatii constanta', 'descriere...', '/uploads/listThumbnails/1528717623867_despre-delfinariu1.jpg', 1, '2020-06-20 16:57:16');
+INSERT INTO licenta.list (id, title, description, thumbnail, creator, created_at) VALUES (5, 'Malluri si magazine', 'alta descriere', '/uploads/listThumbnails/1526579707095_83963 (1).jpg', 1, '2017-06-20 16:58:52');
+INSERT INTO licenta.list (id, title, description, thumbnail, creator, created_at) VALUES (6, 'Locatii constanta part2', 'descriere', '/uploads/listThumbnails/1529485582112_20180619_115143.jpg', 1, '2015-06-20 16:58:53');
+INSERT INTO licenta.list (id, title, description, thumbnail, creator, created_at) VALUES (8, 'test', 'test', '/uploads/listThumbnails/1529614461823_12055848-tv-color-test-pattern-test-card-for-pal-and-ntsc.jpg', 1, '2018-06-21 23:54:22');

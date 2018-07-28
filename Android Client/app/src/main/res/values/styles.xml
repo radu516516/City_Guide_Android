@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/blue4</item>
+        <item name="colorPrimaryDark">@color/blue5</item>
+        <item name="android:colorAccent">@color/username4</item>
+
+    </style>
+
+
+    <!--custom theme here -->
+    <style name="LogInAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/username4</item>
+        <item name="colorPrimaryDark">@color/username5</item>
+        <item name="colorAccent">@color/linkBlue</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>
